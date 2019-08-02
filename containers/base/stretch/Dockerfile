@@ -27,7 +27,7 @@ RUN apt-get install -y --no-install-recommends \
 # Instal Docker
 ENV DOCKER_VERSION 18.03.1-ce
 RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_VERSION.tgz \
-    && tar --strip-components=1 -xvzf docker-18.03.1-ce.tgz -C /usr/local/bin
+    && tar --strip-components=1 -xvzf docker-$DOCKER_VERSION.tgz -C /usr/local/bin
 RUN rm docker-$DOCKER_VERSION.tgz
 
 # Install kubectl
